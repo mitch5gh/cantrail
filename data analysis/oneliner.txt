@@ -1,0 +1,2 @@
+tshark -r 001-5off5left5off5right5off.pcap | sed -r -e 's/\              →              / /g' | sed -r -e 's/CAN/ /g' | sed -r -e 's/STD:/ /g' | sed -r -e 's/^[0-9]+ / /g' | sed -r -e 's/   [0-9]+  / /g' | sed -r -e 's/ 0x0000/ /g' | sed -r -e 's/   /  /g' | sed -r -e 's/^ //g' | sed -r -e 's/  /,/g' | sed -r -e 's/ //g' | sed -r -e 's/^[0-9]+,//g' > 5o5l5o5r5o.csv
+
